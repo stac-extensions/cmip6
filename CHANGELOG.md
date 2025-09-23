@@ -16,7 +16,22 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Fixed
 
-[Unreleased]: <https://github.com/stac-extensions/cmip6/compare/v2.0.0...HEAD>
+[Unreleased]: <https://github.com/stac-extensions/cmip6/compare/v3.0.0...HEAD>
+
+## [3.0.0]
+
+### Added
+
+### Changed
+- Update to lastest schema for new ESGVoc output.
+
+### Deprecated
+
+### Removed
+
+### Fixed
+
+[3.0.0]: <https://github.com/stac-extensions/cmip6/compare/v3.0.0...HEAD>
 
 ## [2.0.0]
 
