@@ -2,10 +2,11 @@
   "type": "Feature",
   "stac_version": "1.1.0",
   "stac_extensions": [
-    "https://stac-extensions.github.io/cmip6/v2.0.0/schema.json"
+    "https://stac-extensions.github.io/cmip6/v3.0.0/schema.json",
+    "https://stac-extensions.github.io/file/v2.1.0/schema.json"
   ],
   "id": "CMIP6.ScenarioMIP.THU.CIESM.ssp585.r1i1p1f1.Amon.rsus.gr.v20200806",
-  "collection": "cmip6",
+  "collection": "CMIP6",
   "geometry": {
     "type": "Polygon",
     "coordinates": [
@@ -42,12 +43,38 @@
   "properties": {
     "title": "CMIP6.ScenarioMIP.THU.CIESM.ssp585.r1i1p1f1.Amon.rsus.gr.v20200806",
     "datetime": null,
+    "latest": true,
+    "retracted": false,
+    "size": 1000,
+    "cmip6:activity_id": [
+      "ScenarioMIP"
+    ],
     "updated": "2025-01-24T14:29:23.741213Z",
     "start_datetime": "4029-01-16T12:00:00Z",
     "end_datetime": "4114-12-16T12:00:00Z",
     "cmip6:product": "model-output",
     "project": "CMIP6",
-    "cmip6:realm": "aerosol",
+    "cmip6:realm": [
+      "aerosol"
+    ],
+    "cmip6:conventions": [
+      "CMIP-6.0"
+    ],
+    "cmip6:experiment": "As piSST, but with monthly-varying SSTs taken from years 111-140 of each model's own abrupt-4xCO2 experiment instead of from piControl. Sea-ice is unchanged from piSST",
+    "cmip6:forcing_index": 1,
+    "cmip6:initialization_index": 1,
+    "cmip6:realization_index": 1,
+    "cmip6:physics_index": 1,
+    "cmip6:institution": "Lawrence Livermore National Laboratory, Livermore, CA 94550, USA. Mailing address: LLNL Climate Program, c/o Stephen A. Klein, Principal Investigator, L-103, 7000 East Avenue, Livermore, CA 94550, USA",
+    "cmip6:license": "CC0-1.0",
+    "cmip6:member_id": "s2024-r3i3p3f3",
+    "cmip6:pid": "hdl:21.14100/D6A1A806-f857-FecC-780a-De0eca7452ec",
+    "cmip6:source": "EC-Earth3-LR",
+    "cmip6:sub_experiment": "initialized near end of year 2016",
+    "cmip6:variable_cf_standard_name": "minus_tendency_of_atmosphere_mass_content_of_sulfur_dioxide_due_to_dry_deposition",
+    "cmip6:variable_units": "m2 s-1",
+    "cmip6:version": "23981231",
+    "cmip6:variable_long_name": "Gas-Phase Production Rate of SO4",
     "cmip6:citation_url": "http://cera-www.dkrz.de/WDCC/meta/CMIP6/CMIP6.ScenarioMIP.THU.CIESM.ssp585.r1i1p1f1.Amon.rsus.gr.v20200806.json",
     "cmip6:data_specs_version": "01.00.29",
     "cmip6:frequency": "mon",
@@ -55,12 +82,13 @@
     "cmip6:grid": "zonal mean data reported on a model's native latitude grid",
     "cmip6:grid_label": "gr",
     "cmip6:institution_id": "THU",
-    "cmip6:mip_era": "CMIP6",
     "cmip6:source_id": "CIESM",
-    "cmip6:source_type": "AOGCM",
+    "cmip6:source_type": [
+      "AOGCM"
+    ],
     "cmip6:experiment_id": "ssp585",
     "cmip6:sub_experiment_id": "s1989",
-    "cmip6:nominal_resolution": "100km",
+    "cmip6:nominal_resolution": "100 km",
     "cmip6:table_id": "Amon",
     "cmip6:variable_id": "rsus",
     "cmip6:variant_label": "r1i1p1f1",
@@ -96,16 +124,28 @@
         "reference",
         "data"
       ],
+      "cmip6:tracking_id": "hdl:21.14100/12FA6A18-f7fA-FDe7-C04e-B32874c8c27b",
+      "protocol": "https",
       "open_zarr_kwargs": {
         "decode_times": true
-      }
+      },
+      "created": "2025-01-24T14:29:23Z",
+      "updated": "2025-01-24T14:29:23Z",
+      "file:checksum": "fe60fd36199a07c2a888e2f6861920b0",
+      "file:size": 100
     },
     "data0001": {
       "href": "https://dap.ceda.ac.uk/badc/cmip6/data/CMIP6/ScenarioMIP/THU/CIESM/ssp585/r1i1p1f1/Amon/rsus/gr/v20200806/rsus_Amon_CIESM_ssp585_r1i1p1f1_gr_402901-411412.nc",
       "type": "application/netcdf",
+      "created": "2025-01-01T14:29:23Z",
+      "updated": "2025-01-01T14:29:23Z",
       "roles": [
         "data"
-      ]
+      ],
+      "cmip6:tracking_id": "hdl:21.14100/7a93BD5B-Bd7E-39ab-7147-C50583F23fBD",
+      "protocol": "https",
+      "file:checksum": "f0d35adeeea2419e7c9011800c7398a2",
+      "file:size": 1000
     }
   }
 }

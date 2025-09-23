@@ -417,7 +417,7 @@
         },
         "cmip6:citation_url": {
           "type": "string",
-          "pattern": "https?:\\/\\/cera\\-www\\.dkrz\\.de\\/WDCC\\/meta\\/CMIP6\\/.*"
+          "pattern": "https?:\\/\\/cera-www\\.dkrz\\.de\\/WDCC\\/meta\\/CMIP6\\/.*"
         },
         "cmip6:conventions": {
           "type": "array",
