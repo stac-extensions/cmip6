@@ -31,7 +31,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Fixed
 
-[2.0.0]: <https://github.com/stac-extensions/cmip6/compare/v3.0.0...HEAD>
+[3.0.0]: <https://github.com/stac-extensions/cmip6/compare/v3.0.0...HEAD>
 
 ## [2.0.0]
 
