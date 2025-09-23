@@ -48,7 +48,7 @@
     "cmip6:product": "model-output",
     "project": "CMIP6",
     "cmip6:realm": "aerosol",
-    "citation_url": "http://cera-www.dkrz.de/WDCC/meta/CMIP6/CMIP6.ScenarioMIP.THU.CIESM.ssp585.r1i1p1f1.Amon.rsus.gr.v20200806.json",
+    "cmip6:citation_url": "http://cera-www.dkrz.de/WDCC/meta/CMIP6/CMIP6.ScenarioMIP.THU.CIESM.ssp585.r1i1p1f1.Amon.rsus.gr.v20200806.json",
     "cmip6:data_specs_version": "01.00.29",
     "cmip6:frequency": "mon",
     "cmip6:further_info_url": "https://furtherinfo.es-doc.org/CMIP6.THU.CIESM.ssp585.none.r1i1p1f1",
