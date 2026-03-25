@@ -82,21 +82,7 @@
           "type": "array",
           "items": {
             "$ref": "#/definitions/link_fields"
-          },
-          "anyOf": [
-            {
-              "contains": {
-                "properties": {
-                  "rel": {
-                    "const": "cite-as"
-                  }
-                },
-                "required": [
-                  "rel"
-                ]
-              }
-            }
-          ]
+          }
         }
       }
     },
