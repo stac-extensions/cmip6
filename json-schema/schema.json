@@ -77,6 +77,26 @@
               }
             ]
           }
+        },
+        "links": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/link_fields"
+          },
+          "allOf": [
+            {
+              "contains": {
+                "properties": {
+                  "rel": {
+                    "const": "cite-as"
+                  }
+                },
+                "required": [
+                  "rel"
+                ]
+              }
+            }
+          ]
         }
       }
     },
@@ -148,11 +168,6 @@
         },
         {
           "required": [
-            "cmip6:citation_url"
-          ]
-        },
-        {
-          "required": [
             "cmip6:data_specs_version"
           ]
         },
@@ -164,11 +179,6 @@
         {
           "required": [
             "cmip6:frequency"
-          ]
-        },
-        {
-          "required": [
-            "cmip6:further_info_url"
           ]
         },
         {
@@ -263,11 +273,6 @@
         },
         {
           "required": [
-            "node"
-          ]
-        },
-        {
-          "required": [
             "protocol"
           ]
         }
@@ -277,10 +282,6 @@
       "$comment": " Don't require fields here, do that above in the corresponding schema.",
       "type": "object",
       "properties": {
-        "node": {
-          "type": "string",
-          "pattern": "^([a-z0-9]+(-[a-z0-9]+)*\\.)+[a-z]{2,}$"
-        },
         "protocol": {
           "type": "string",
           "enum": [
@@ -349,10 +350,6 @@
             "type": "string"
           }
         },
-        "cmip6:citation_url": {
-          "type": "string",
-          "pattern": "https?:\\/\\/cera\\-www\\.dkrz\\.de\\/WDCC\\/meta\\/CMIP6\\/.*"
-        },
         "cmip6:conventions": {
           "type": "array",
           "items": {
@@ -369,12 +366,19 @@
         "cmip6:data_specs_version": {
           "type": "string",
           "enum": [
+            "01.00.18",
+            "01.00.19",
+            "01.00.20",
+            "01.00.21",
             "01.00.22",
             "01.00.23",
+            "01.00.24",
             "01.00.25",
+            "01.00.26",
             "01.00.27",
-            "01.00.29",
             "01.00.28",
+            "01.00.29",
+            "01.00.30",
             "01.00.31",
             "01.00.32",
             "01.00.33"
@@ -735,10 +739,6 @@
             "yrPt"
           ]
         },
-        "cmip6:further_info_url": {
-          "type": "string",
-          "pattern": "https:\\/\\/furtherinfo\\.es-doc\\.org\\/.*"
-        },
         "cmip6:grid": {
           "type": "string"
         },
@@ -920,229 +920,229 @@
               "pattern": "^r\\d+i(\\d{4}\\d{2}[abcde]?|\\d+)p\\d+f\\d+$"
             },
             {
-              "pattern": "^s2009-r(?P<realization_index>\\d+)i(?P<initialization_index>(\\d{4}\\d{2}[abcde]?|\\d+))p(?P<physics_index>\\d+)f(?P<forcing_index>\\d+)$"
+              "pattern": "^s2009-r\\d+i(\\d{4}\\d{2}[abcde]?|\\d+)p\\d+f\\d+$"
             },
             {
-              "pattern": "^s2013-r(?P<realization_index>\\d+)i(?P<initialization_index>(\\d{4}\\d{2}[abcde]?|\\d+))p(?P<physics_index>\\d+)f(?P<forcing_index>\\d+)$"
+              "pattern": "^s2013-r\\d+i(\\d{4}\\d{2}[abcde]?|\\d+)p\\d+f\\d+$"
             },
             {
-              "pattern": "^s1979-r(?P<realization_index>\\d+)i(?P<initialization_index>(\\d{4}\\d{2}[abcde]?|\\d+))p(?P<physics_index>\\d+)f(?P<forcing_index>\\d+)$"
+              "pattern": "^s1979-r\\d+i(\\d{4}\\d{2}[abcde]?|\\d+)p\\d+f\\d+$"
             },
             {
-              "pattern": "^s1986-r(?P<realization_index>\\d+)i(?P<initialization_index>(\\d{4}\\d{2}[abcde]?|\\d+))p(?P<physics_index>\\d+)f(?P<forcing_index>\\d+)$"
+              "pattern": "^s1986-r\\d+i(\\d{4}\\d{2}[abcde]?|\\d+)p\\d+f\\d+$"
             },
             {
-              "pattern": "^s1970-r(?P<realization_index>\\d+)i(?P<initialization_index>(\\d{4}\\d{2}[abcde]?|\\d+))p(?P<physics_index>\\d+)f(?P<forcing_index>\\d+)$"
+              "pattern": "^s1970-r\\d+i(\\d{4}\\d{2}[abcde]?|\\d+)p\\d+f\\d+$"
             },
             {
-              "pattern": "^s1963-r(?P<realization_index>\\d+)i(?P<initialization_index>(\\d{4}\\d{2}[abcde]?|\\d+))p(?P<physics_index>\\d+)f(?P<forcing_index>\\d+)$"
+              "pattern": "^s1963-r\\d+i(\\d{4}\\d{2}[abcde]?|\\d+)p\\d+f\\d+$"
             },
             {
-              "pattern": "^s2014-r(?P<realization_index>\\d+)i(?P<initialization_index>(\\d{4}\\d{2}[abcde]?|\\d+))p(?P<physics_index>\\d+)f(?P<forcing_index>\\d+)$"
+              "pattern": "^s2014-r\\d+i(\\d{4}\\d{2}[abcde]?|\\d+)p\\d+f\\d+$"
             },
             {
-              "pattern": "^s2026-r(?P<realization_index>\\d+)i(?P<initialization_index>(\\d{4}\\d{2}[abcde]?|\\d+))p(?P<physics_index>\\d+)f(?P<forcing_index>\\d+)$"
+              "pattern": "^s2026-r\\d+i(\\d{4}\\d{2}[abcde]?|\\d+)p\\d+f\\d+$"
             },
             {
-              "pattern": "^s1999-r(?P<realization_index>\\d+)i(?P<initialization_index>(\\d{4}\\d{2}[abcde]?|\\d+))p(?P<physics_index>\\d+)f(?P<forcing_index>\\d+)$"
+              "pattern": "^s1999-r\\d+i(\\d{4}\\d{2}[abcde]?|\\d+)p\\d+f\\d+$"
             },
             {
-              "pattern": "^s1988-r(?P<realization_index>\\d+)i(?P<initialization_index>(\\d{4}\\d{2}[abcde]?|\\d+))p(?P<physics_index>\\d+)f(?P<forcing_index>\\d+)$"
+              "pattern": "^s1988-r\\d+i(\\d{4}\\d{2}[abcde]?|\\d+)p\\d+f\\d+$"
             },
             {
-              "pattern": "^s1995-r(?P<realization_index>\\d+)i(?P<initialization_index>(\\d{4}\\d{2}[abcde]?|\\d+))p(?P<physics_index>\\d+)f(?P<forcing_index>\\d+)$"
+              "pattern": "^s1995-r\\d+i(\\d{4}\\d{2}[abcde]?|\\d+)p\\d+f\\d+$"
             },
             {
-              "pattern": "^s1969-r(?P<realization_index>\\d+)i(?P<initialization_index>(\\d{4}\\d{2}[abcde]?|\\d+))p(?P<physics_index>\\d+)f(?P<forcing_index>\\d+)$"
+              "pattern": "^s1969-r\\d+i(\\d{4}\\d{2}[abcde]?|\\d+)p\\d+f\\d+$"
             },
             {
-              "pattern": "^s1975-r(?P<realization_index>\\d+)i(?P<initialization_index>(\\d{4}\\d{2}[abcde]?|\\d+))p(?P<physics_index>\\d+)f(?P<forcing_index>\\d+)$"
+              "pattern": "^s1975-r\\d+i(\\d{4}\\d{2}[abcde]?|\\d+)p\\d+f\\d+$"
             },
             {
-              "pattern": "^s2007-r(?P<realization_index>\\d+)i(?P<initialization_index>(\\d{4}\\d{2}[abcde]?|\\d+))p(?P<physics_index>\\d+)f(?P<forcing_index>\\d+)$"
+              "pattern": "^s2007-r\\d+i(\\d{4}\\d{2}[abcde]?|\\d+)p\\d+f\\d+$"
             },
             {
-              "pattern": "^s1984-r(?P<realization_index>\\d+)i(?P<initialization_index>(\\d{4}\\d{2}[abcde]?|\\d+))p(?P<physics_index>\\d+)f(?P<forcing_index>\\d+)$"
+              "pattern": "^s1984-r\\d+i(\\d{4}\\d{2}[abcde]?|\\d+)p\\d+f\\d+$"
             },
             {
-              "pattern": "^s2004-r(?P<realization_index>\\d+)i(?P<initialization_index>(\\d{4}\\d{2}[abcde]?|\\d+))p(?P<physics_index>\\d+)f(?P<forcing_index>\\d+)$"
+              "pattern": "^s2004-r\\d+i(\\d{4}\\d{2}[abcde]?|\\d+)p\\d+f\\d+$"
             },
             {
-              "pattern": "^s1960-r(?P<realization_index>\\d+)i(?P<initialization_index>(\\d{4}\\d{2}[abcde]?|\\d+))p(?P<physics_index>\\d+)f(?P<forcing_index>\\d+)$"
+              "pattern": "^s1960-r\\d+i(\\d{4}\\d{2}[abcde]?|\\d+)p\\d+f\\d+$"
             },
             {
-              "pattern": "^s1967-r(?P<realization_index>\\d+)i(?P<initialization_index>(\\d{4}\\d{2}[abcde]?|\\d+))p(?P<physics_index>\\d+)f(?P<forcing_index>\\d+)$"
+              "pattern": "^s1967-r\\d+i(\\d{4}\\d{2}[abcde]?|\\d+)p\\d+f\\d+$"
             },
             {
-              "pattern": "^s2005-r(?P<realization_index>\\d+)i(?P<initialization_index>(\\d{4}\\d{2}[abcde]?|\\d+))p(?P<physics_index>\\d+)f(?P<forcing_index>\\d+)$"
+              "pattern": "^s2005-r\\d+i(\\d{4}\\d{2}[abcde]?|\\d+)p\\d+f\\d+$"
             },
             {
-              "pattern": "^s2022-r(?P<realization_index>\\d+)i(?P<initialization_index>(\\d{4}\\d{2}[abcde]?|\\d+))p(?P<physics_index>\\d+)f(?P<forcing_index>\\d+)$"
+              "pattern": "^s2022-r\\d+i(\\d{4}\\d{2}[abcde]?|\\d+)p\\d+f\\d+$"
             },
             {
-              "pattern": "^s1980-r(?P<realization_index>\\d+)i(?P<initialization_index>(\\d{4}\\d{2}[abcde]?|\\d+))p(?P<physics_index>\\d+)f(?P<forcing_index>\\d+)$"
+              "pattern": "^s1980-r\\d+i(\\d{4}\\d{2}[abcde]?|\\d+)p\\d+f\\d+$"
             },
             {
-              "pattern": "^s2021-r(?P<realization_index>\\d+)i(?P<initialization_index>(\\d{4}\\d{2}[abcde]?|\\d+))p(?P<physics_index>\\d+)f(?P<forcing_index>\\d+)$"
+              "pattern": "^s2021-r\\d+i(\\d{4}\\d{2}[abcde]?|\\d+)p\\d+f\\d+$"
             },
             {
-              "pattern": "^s2020-r(?P<realization_index>\\d+)i(?P<initialization_index>(\\d{4}\\d{2}[abcde]?|\\d+))p(?P<physics_index>\\d+)f(?P<forcing_index>\\d+)$"
+              "pattern": "^s2020-r\\d+i(\\d{4}\\d{2}[abcde]?|\\d+)p\\d+f\\d+$"
             },
             {
-              "pattern": "^s1972-r(?P<realization_index>\\d+)i(?P<initialization_index>(\\d{4}\\d{2}[abcde]?|\\d+))p(?P<physics_index>\\d+)f(?P<forcing_index>\\d+)$"
+              "pattern": "^s1972-r\\d+i(\\d{4}\\d{2}[abcde]?|\\d+)p\\d+f\\d+$"
             },
             {
-              "pattern": "^s1992-r(?P<realization_index>\\d+)i(?P<initialization_index>(\\d{4}\\d{2}[abcde]?|\\d+))p(?P<physics_index>\\d+)f(?P<forcing_index>\\d+)$"
+              "pattern": "^s1992-r\\d+i(\\d{4}\\d{2}[abcde]?|\\d+)p\\d+f\\d+$"
             },
             {
-              "pattern": "^s1973-r(?P<realization_index>\\d+)i(?P<initialization_index>(\\d{4}\\d{2}[abcde]?|\\d+))p(?P<physics_index>\\d+)f(?P<forcing_index>\\d+)$"
+              "pattern": "^s1973-r\\d+i(\\d{4}\\d{2}[abcde]?|\\d+)p\\d+f\\d+$"
             },
             {
-              "pattern": "^s1982-r(?P<realization_index>\\d+)i(?P<initialization_index>(\\d{4}\\d{2}[abcde]?|\\d+))p(?P<physics_index>\\d+)f(?P<forcing_index>\\d+)$"
+              "pattern": "^s1982-r\\d+i(\\d{4}\\d{2}[abcde]?|\\d+)p\\d+f\\d+$"
             },
             {
-              "pattern": "^s2019-r(?P<realization_index>\\d+)i(?P<initialization_index>(\\d{4}\\d{2}[abcde]?|\\d+))p(?P<physics_index>\\d+)f(?P<forcing_index>\\d+)$"
+              "pattern": "^s2019-r\\d+i(\\d{4}\\d{2}[abcde]?|\\d+)p\\d+f\\d+$"
             },
             {
-              "pattern": "^s2027-r(?P<realization_index>\\d+)i(?P<initialization_index>(\\d{4}\\d{2}[abcde]?|\\d+))p(?P<physics_index>\\d+)f(?P<forcing_index>\\d+)$"
+              "pattern": "^s2027-r\\d+i(\\d{4}\\d{2}[abcde]?|\\d+)p\\d+f\\d+$"
             },
             {
-              "pattern": "^s1977-r(?P<realization_index>\\d+)i(?P<initialization_index>(\\d{4}\\d{2}[abcde]?|\\d+))p(?P<physics_index>\\d+)f(?P<forcing_index>\\d+)$"
+              "pattern": "^s1977-r\\d+i(\\d{4}\\d{2}[abcde]?|\\d+)p\\d+f\\d+$"
             },
             {
-              "pattern": "^s2015-r(?P<realization_index>\\d+)i(?P<initialization_index>(\\d{4}\\d{2}[abcde]?|\\d+))p(?P<physics_index>\\d+)f(?P<forcing_index>\\d+)$"
+              "pattern": "^s2015-r\\d+i(\\d{4}\\d{2}[abcde]?|\\d+)p\\d+f\\d+$"
             },
             {
-              "pattern": "^s1974-r(?P<realization_index>\\d+)i(?P<initialization_index>(\\d{4}\\d{2}[abcde]?|\\d+))p(?P<physics_index>\\d+)f(?P<forcing_index>\\d+)$"
+              "pattern": "^s1974-r\\d+i(\\d{4}\\d{2}[abcde]?|\\d+)p\\d+f\\d+$"
             },
             {
-              "pattern": "^f2023-r(?P<realization_index>\\d+)i(?P<initialization_index>(\\d{4}\\d{2}[abcde]?|\\d+))p(?P<physics_index>\\d+)f(?P<forcing_index>\\d+)$"
+              "pattern": "^f2023-r\\d+i(\\d{4}\\d{2}[abcde]?|\\d+)p\\d+f\\d+$"
             },
             {
-              "pattern": "^s1997-r(?P<realization_index>\\d+)i(?P<initialization_index>(\\d{4}\\d{2}[abcde]?|\\d+))p(?P<physics_index>\\d+)f(?P<forcing_index>\\d+)$"
+              "pattern": "^s1997-r\\d+i(\\d{4}\\d{2}[abcde]?|\\d+)p\\d+f\\d+$"
             },
             {
-              "pattern": "^s2025-r(?P<realization_index>\\d+)i(?P<initialization_index>(\\d{4}\\d{2}[abcde]?|\\d+))p(?P<physics_index>\\d+)f(?P<forcing_index>\\d+)$"
+              "pattern": "^s2025-r\\d+i(\\d{4}\\d{2}[abcde]?|\\d+)p\\d+f\\d+$"
             },
             {
-              "pattern": "^s1978-r(?P<realization_index>\\d+)i(?P<initialization_index>(\\d{4}\\d{2}[abcde]?|\\d+))p(?P<physics_index>\\d+)f(?P<forcing_index>\\d+)$"
+              "pattern": "^s1978-r\\d+i(\\d{4}\\d{2}[abcde]?|\\d+)p\\d+f\\d+$"
             },
             {
-              "pattern": "^s2023-r(?P<realization_index>\\d+)i(?P<initialization_index>(\\d{4}\\d{2}[abcde]?|\\d+))p(?P<physics_index>\\d+)f(?P<forcing_index>\\d+)$"
+              "pattern": "^s2023-r\\d+i(\\d{4}\\d{2}[abcde]?|\\d+)p\\d+f\\d+$"
             },
             {
-              "pattern": "^s1998-r(?P<realization_index>\\d+)i(?P<initialization_index>(\\d{4}\\d{2}[abcde]?|\\d+))p(?P<physics_index>\\d+)f(?P<forcing_index>\\d+)$"
+              "pattern": "^s1998-r\\d+i(\\d{4}\\d{2}[abcde]?|\\d+)p\\d+f\\d+$"
             },
             {
-              "pattern": "^s2001-r(?P<realization_index>\\d+)i(?P<initialization_index>(\\d{4}\\d{2}[abcde]?|\\d+))p(?P<physics_index>\\d+)f(?P<forcing_index>\\d+)$"
+              "pattern": "^s2001-r\\d+i(\\d{4}\\d{2}[abcde]?|\\d+)p\\d+f\\d+$"
             },
             {
-              "pattern": "^s1991-r(?P<realization_index>\\d+)i(?P<initialization_index>(\\d{4}\\d{2}[abcde]?|\\d+))p(?P<physics_index>\\d+)f(?P<forcing_index>\\d+)$"
+              "pattern": "^s1991-r\\d+i(\\d{4}\\d{2}[abcde]?|\\d+)p\\d+f\\d+$"
             },
             {
-              "pattern": "^s2028-r(?P<realization_index>\\d+)i(?P<initialization_index>(\\d{4}\\d{2}[abcde]?|\\d+))p(?P<physics_index>\\d+)f(?P<forcing_index>\\d+)$"
+              "pattern": "^s2028-r\\d+i(\\d{4}\\d{2}[abcde]?|\\d+)p\\d+f\\d+$"
             },
             {
-              "pattern": "^s1971-r(?P<realization_index>\\d+)i(?P<initialization_index>(\\d{4}\\d{2}[abcde]?|\\d+))p(?P<physics_index>\\d+)f(?P<forcing_index>\\d+)$"
+              "pattern": "^s1971-r\\d+i(\\d{4}\\d{2}[abcde]?|\\d+)p\\d+f\\d+$"
             },
             {
-              "pattern": "^s1993-r(?P<realization_index>\\d+)i(?P<initialization_index>(\\d{4}\\d{2}[abcde]?|\\d+))p(?P<physics_index>\\d+)f(?P<forcing_index>\\d+)$"
+              "pattern": "^s1993-r\\d+i(\\d{4}\\d{2}[abcde]?|\\d+)p\\d+f\\d+$"
             },
             {
-              "pattern": "^s1990-r(?P<realization_index>\\d+)i(?P<initialization_index>(\\d{4}\\d{2}[abcde]?|\\d+))p(?P<physics_index>\\d+)f(?P<forcing_index>\\d+)$"
+              "pattern": "^s1990-r\\d+i(\\d{4}\\d{2}[abcde]?|\\d+)p\\d+f\\d+$"
             },
             {
-              "pattern": "^s2003-r(?P<realization_index>\\d+)i(?P<initialization_index>(\\d{4}\\d{2}[abcde]?|\\d+))p(?P<physics_index>\\d+)f(?P<forcing_index>\\d+)$"
+              "pattern": "^s2003-r\\d+i(\\d{4}\\d{2}[abcde]?|\\d+)p\\d+f\\d+$"
             },
             {
-              "pattern": "^s2002-r(?P<realization_index>\\d+)i(?P<initialization_index>(\\d{4}\\d{2}[abcde]?|\\d+))p(?P<physics_index>\\d+)f(?P<forcing_index>\\d+)$"
+              "pattern": "^s2002-r\\d+i(\\d{4}\\d{2}[abcde]?|\\d+)p\\d+f\\d+$"
             },
             {
-              "pattern": "^none-r(?P<realization_index>\\d+)i(?P<initialization_index>(\\d{4}\\d{2}[abcde]?|\\d+))p(?P<physics_index>\\d+)f(?P<forcing_index>\\d+)$"
+              "pattern": "^none-r\\d+i(\\d{4}\\d{2}[abcde]?|\\d+)p\\d+f\\d+$"
             },
             {
-              "pattern": "^s1966-r(?P<realization_index>\\d+)i(?P<initialization_index>(\\d{4}\\d{2}[abcde]?|\\d+))p(?P<physics_index>\\d+)f(?P<forcing_index>\\d+)$"
+              "pattern": "^s1966-r\\d+i(\\d{4}\\d{2}[abcde]?|\\d+)p\\d+f\\d+$"
             },
             {
-              "pattern": "^s1968-r(?P<realization_index>\\d+)i(?P<initialization_index>(\\d{4}\\d{2}[abcde]?|\\d+))p(?P<physics_index>\\d+)f(?P<forcing_index>\\d+)$"
+              "pattern": "^s1968-r\\d+i(\\d{4}\\d{2}[abcde]?|\\d+)p\\d+f\\d+$"
             },
             {
-              "pattern": "^s2029-r(?P<realization_index>\\d+)i(?P<initialization_index>(\\d{4}\\d{2}[abcde]?|\\d+))p(?P<physics_index>\\d+)f(?P<forcing_index>\\d+)$"
+              "pattern": "^s2029-r\\d+i(\\d{4}\\d{2}[abcde]?|\\d+)p\\d+f\\d+$"
             },
             {
-              "pattern": "^s2008-r(?P<realization_index>\\d+)i(?P<initialization_index>(\\d{4}\\d{2}[abcde]?|\\d+))p(?P<physics_index>\\d+)f(?P<forcing_index>\\d+)$"
+              "pattern": "^s2008-r\\d+i(\\d{4}\\d{2}[abcde]?|\\d+)p\\d+f\\d+$"
             },
             {
-              "pattern": "^s1976-r(?P<realization_index>\\d+)i(?P<initialization_index>(\\d{4}\\d{2}[abcde]?|\\d+))p(?P<physics_index>\\d+)f(?P<forcing_index>\\d+)$"
+              "pattern": "^s1976-r\\d+i(\\d{4}\\d{2}[abcde]?|\\d+)p\\d+f\\d+$"
             },
             {
-              "pattern": "^s1964-r(?P<realization_index>\\d+)i(?P<initialization_index>(\\d{4}\\d{2}[abcde]?|\\d+))p(?P<physics_index>\\d+)f(?P<forcing_index>\\d+)$"
+              "pattern": "^s1964-r\\d+i(\\d{4}\\d{2}[abcde]?|\\d+)p\\d+f\\d+$"
             },
             {
-              "pattern": "^s2016-r(?P<realization_index>\\d+)i(?P<initialization_index>(\\d{4}\\d{2}[abcde]?|\\d+))p(?P<physics_index>\\d+)f(?P<forcing_index>\\d+)$"
+              "pattern": "^s2016-r\\d+i(\\d{4}\\d{2}[abcde]?|\\d+)p\\d+f\\d+$"
             },
             {
-              "pattern": "^s1989-r(?P<realization_index>\\d+)i(?P<initialization_index>(\\d{4}\\d{2}[abcde]?|\\d+))p(?P<physics_index>\\d+)f(?P<forcing_index>\\d+)$"
+              "pattern": "^s1989-r\\d+i(\\d{4}\\d{2}[abcde]?|\\d+)p\\d+f\\d+$"
             },
             {
-              "pattern": "^s2010-r(?P<realization_index>\\d+)i(?P<initialization_index>(\\d{4}\\d{2}[abcde]?|\\d+))p(?P<physics_index>\\d+)f(?P<forcing_index>\\d+)$"
+              "pattern": "^s2010-r\\d+i(\\d{4}\\d{2}[abcde]?|\\d+)p\\d+f\\d+$"
             },
             {
-              "pattern": "^s1985-r(?P<realization_index>\\d+)i(?P<initialization_index>(\\d{4}\\d{2}[abcde]?|\\d+))p(?P<physics_index>\\d+)f(?P<forcing_index>\\d+)$"
+              "pattern": "^s1985-r\\d+i(\\d{4}\\d{2}[abcde]?|\\d+)p\\d+f\\d+$"
             },
             {
-              "pattern": "^s2017-r(?P<realization_index>\\d+)i(?P<initialization_index>(\\d{4}\\d{2}[abcde]?|\\d+))p(?P<physics_index>\\d+)f(?P<forcing_index>\\d+)$"
+              "pattern": "^s2017-r\\d+i(\\d{4}\\d{2}[abcde]?|\\d+)p\\d+f\\d+$"
             },
             {
-              "pattern": "^s1961-r(?P<realization_index>\\d+)i(?P<initialization_index>(\\d{4}\\d{2}[abcde]?|\\d+))p(?P<physics_index>\\d+)f(?P<forcing_index>\\d+)$"
+              "pattern": "^s1961-r\\d+i(\\d{4}\\d{2}[abcde]?|\\d+)p\\d+f\\d+$"
             },
             {
-              "pattern": "^s2024-r(?P<realization_index>\\d+)i(?P<initialization_index>(\\d{4}\\d{2}[abcde]?|\\d+))p(?P<physics_index>\\d+)f(?P<forcing_index>\\d+)$"
+              "pattern": "^s2024-r\\d+i(\\d{4}\\d{2}[abcde]?|\\d+)p\\d+f\\d+$"
             },
             {
-              "pattern": "^s1910-r(?P<realization_index>\\d+)i(?P<initialization_index>(\\d{4}\\d{2}[abcde]?|\\d+))p(?P<physics_index>\\d+)f(?P<forcing_index>\\d+)$"
+              "pattern": "^s1910-r\\d+i(\\d{4}\\d{2}[abcde]?|\\d+)p\\d+f\\d+$"
             },
             {
-              "pattern": "^s2011-r(?P<realization_index>\\d+)i(?P<initialization_index>(\\d{4}\\d{2}[abcde]?|\\d+))p(?P<physics_index>\\d+)f(?P<forcing_index>\\d+)$"
+              "pattern": "^s2011-r\\d+i(\\d{4}\\d{2}[abcde]?|\\d+)p\\d+f\\d+$"
             },
             {
-              "pattern": "^s1987-r(?P<realization_index>\\d+)i(?P<initialization_index>(\\d{4}\\d{2}[abcde]?|\\d+))p(?P<physics_index>\\d+)f(?P<forcing_index>\\d+)$"
+              "pattern": "^s1987-r\\d+i(\\d{4}\\d{2}[abcde]?|\\d+)p\\d+f\\d+$"
             },
             {
-              "pattern": "^s1920-r(?P<realization_index>\\d+)i(?P<initialization_index>(\\d{4}\\d{2}[abcde]?|\\d+))p(?P<physics_index>\\d+)f(?P<forcing_index>\\d+)$"
+              "pattern": "^s1920-r\\d+i(\\d{4}\\d{2}[abcde]?|\\d+)p\\d+f\\d+$"
             },
             {
-              "pattern": "^s1962-r(?P<realization_index>\\d+)i(?P<initialization_index>(\\d{4}\\d{2}[abcde]?|\\d+))p(?P<physics_index>\\d+)f(?P<forcing_index>\\d+)$"
+              "pattern": "^s1962-r\\d+i(\\d{4}\\d{2}[abcde]?|\\d+)p\\d+f\\d+$"
             },
             {
-              "pattern": "^s1950-r(?P<realization_index>\\d+)i(?P<initialization_index>(\\d{4}\\d{2}[abcde]?|\\d+))p(?P<physics_index>\\d+)f(?P<forcing_index>\\d+)$"
+              "pattern": "^s1950-r\\d+i(\\d{4}\\d{2}[abcde]?|\\d+)p\\d+f\\d+$"
             },
             {
-              "pattern": "^s1996-r(?P<realization_index>\\d+)i(?P<initialization_index>(\\d{4}\\d{2}[abcde]?|\\d+))p(?P<physics_index>\\d+)f(?P<forcing_index>\\d+)$"
+              "pattern": "^s1996-r\\d+i(\\d{4}\\d{2}[abcde]?|\\d+)p\\d+f\\d+$"
             },
             {
-              "pattern": "^s2000-r(?P<realization_index>\\d+)i(?P<initialization_index>(\\d{4}\\d{2}[abcde]?|\\d+))p(?P<physics_index>\\d+)f(?P<forcing_index>\\d+)$"
+              "pattern": "^s2000-r\\d+i(\\d{4}\\d{2}[abcde]?|\\d+)p\\d+f\\d+$"
             },
             {
-              "pattern": "^s1983-r(?P<realization_index>\\d+)i(?P<initialization_index>(\\d{4}\\d{2}[abcde]?|\\d+))p(?P<physics_index>\\d+)f(?P<forcing_index>\\d+)$"
+              "pattern": "^s1983-r\\d+i(\\d{4}\\d{2}[abcde]?|\\d+)p\\d+f\\d+$"
             },
             {
-              "pattern": "^s1981-r(?P<realization_index>\\d+)i(?P<initialization_index>(\\d{4}\\d{2}[abcde]?|\\d+))p(?P<physics_index>\\d+)f(?P<forcing_index>\\d+)$"
+              "pattern": "^s1981-r\\d+i(\\d{4}\\d{2}[abcde]?|\\d+)p\\d+f\\d+$"
             },
             {
-              "pattern": "^s2012-r(?P<realization_index>\\d+)i(?P<initialization_index>(\\d{4}\\d{2}[abcde]?|\\d+))p(?P<physics_index>\\d+)f(?P<forcing_index>\\d+)$"
+              "pattern": "^s2012-r\\d+i(\\d{4}\\d{2}[abcde]?|\\d+)p\\d+f\\d+$"
             },
             {
-              "pattern": "^s1994-r(?P<realization_index>\\d+)i(?P<initialization_index>(\\d{4}\\d{2}[abcde]?|\\d+))p(?P<physics_index>\\d+)f(?P<forcing_index>\\d+)$"
+              "pattern": "^s1994-r\\d+i(\\d{4}\\d{2}[abcde]?|\\d+)p\\d+f\\d+$"
             },
             {
-              "pattern": "^s2006-r(?P<realization_index>\\d+)i(?P<initialization_index>(\\d{4}\\d{2}[abcde]?|\\d+))p(?P<physics_index>\\d+)f(?P<forcing_index>\\d+)$"
+              "pattern": "^s2006-r\\d+i(\\d{4}\\d{2}[abcde]?|\\d+)p\\d+f\\d+$"
             },
             {
-              "pattern": "^s2018-r(?P<realization_index>\\d+)i(?P<initialization_index>(\\d{4}\\d{2}[abcde]?|\\d+))p(?P<physics_index>\\d+)f(?P<forcing_index>\\d+)$"
+              "pattern": "^s2018-r\\d+i(\\d{4}\\d{2}[abcde]?|\\d+)p\\d+f\\d+$"
             },
             {
-              "pattern": "^s1965-r(?P<realization_index>\\d+)i(?P<initialization_index>(\\d{4}\\d{2}[abcde]?|\\d+))p(?P<physics_index>\\d+)f(?P<forcing_index>\\d+)$"
+              "pattern": "^s1965-r\\d+i(\\d{4}\\d{2}[abcde]?|\\d+)p\\d+f\\d+$"
             }
           ]
         },
@@ -1577,6 +1577,7 @@
             "air_pressure_at_cloud_top",
             "air_pressure_at_convective_cloud_base",
             "air_pressure_at_convective_cloud_top",
+            "air_pressure_at_mean_sea_level",
             "air_temperature",
             "air_temperature_at_cloud_top",
             "area_fraction",
@@ -1610,6 +1611,8 @@
             "atmosphere_northward_stress_due_to_gravity_wave_drag",
             "atmosphere_number_content_of_cloud_droplets",
             "atmosphere_optical_thickness_due_to_ambient_aerosol_particles",
+            "atmosphere_optical_thickness_due_to_ambient_aerosol_particles_assuming_clear_sky",
+            "atmosphere_optical_thickness_due_to_biomass_burning_particulate_matter_ambient_aerosol_particles",
             "atmosphere_optical_thickness_due_to_black_carbon_ambient_aerosol",
             "atmosphere_optical_thickness_due_to_cloud",
             "atmosphere_optical_thickness_due_to_convective_cloud",
@@ -1618,6 +1621,7 @@
             "atmosphere_optical_thickness_due_to_particulate_organic_matter_ambient_aerosol_particles",
             "atmosphere_optical_thickness_due_to_pm1_ambient_aerosol_particles",
             "atmosphere_optical_thickness_due_to_sea_salt_ambient_aerosol_particles",
+            "atmosphere_optical_thickness_due_to_secondary_particulate_organic_matter_ambient_aerosol_particles",
             "atmosphere_optical_thickness_due_to_stratiform_cloud",
             "atmosphere_optical_thickness_due_to_sulfate_ambient_aerosol_particles",
             "atmosphere_optical_thickness_due_to_water_in_ambient_aerosol_particles",
@@ -1696,6 +1700,7 @@
             "effective_radius_of_stratiform_cloud_rain_particles",
             "effective_radius_of_stratiform_cloud_snow_particles",
             "equivalent_thickness_at_stp_of_atmosphere_ozone_content",
+            "equivalent_thickness_at_stp_of_troposphere_ozone_content",
             "fast_soil_pool_mass_content_of_carbon",
             "floating_ice_shelf_area",
             "floating_ice_shelf_area_fraction",
@@ -1721,7 +1726,6 @@
             "height_above_reference_ellipsoid",
             "histogram_of_backscattering_ratio_in_air_over_height_above_reference_ellipsoid",
             "histogram_of_equivalent_reflectivity_factor_over_height_above_reference_ellipsoid",
-            "ice_cloud_area_fraction",
             "ice_cloud_area_fraction_in_atmosphere_layer",
             "incoming_water_volume_transport_along_river_channel",
             "integral_wrt_depth_of_product_of_conservative_temperature_and_sea_water_density",
@@ -1737,6 +1741,7 @@
             "iron_growth_limitation_of_diazotrophic_phytoplankton",
             "iron_growth_limitation_of_miscellaneous_phytoplankton",
             "iron_growth_limitation_of_picophytoplankton",
+            "isccp_cloud_area_fraction",
             "isotope_ratio_of_17O_to_16O_in_sea_water_excluding_solutes_and_solids",
             "isotope_ratio_of_18O_to_16O_in_sea_water_excluding_solutes_and_solids",
             "isotope_ratio_of_2H_to_1H_in_sea_water_excluding_solutes_and_solids",
@@ -1752,6 +1757,7 @@
             "land_ice_mass",
             "land_ice_mass_not_displacing_sea_water",
             "land_ice_runoff_flux",
+            "land_ice_specific_mass_flux_due_to_calving",
             "land_ice_specific_mass_flux_due_to_calving_and_ice_front_melting",
             "land_ice_surface_melt_flux",
             "land_ice_surface_specific_mass_balance_flux",
@@ -1767,7 +1773,6 @@
             "leaf_area_index",
             "leaf_mass_content_of_carbon",
             "leaf_mass_content_of_nitrogen",
-            "liquid_water_cloud_area_fraction",
             "liquid_water_cloud_area_fraction_in_atmosphere_layer",
             "liquid_water_content_of_permafrost_layer",
             "liquid_water_content_of_soil_layer",
@@ -1870,6 +1875,9 @@
             "minus_tendency_of_ocean_mole_content_of_organic_carbon_due_to_sedimentation",
             "miscellaneous_living_matter_mass_content_of_carbon",
             "miscellaneous_living_matter_mass_content_of_nitrogen",
+            "modis_cloud_area_fraction",
+            "modis_ice_topped_cloud_area_fraction",
+            "modis_liquid_topped_cloud_area_fraction",
             "mole_concentration_of_ammonium_in_sea_water",
             "mole_concentration_of_aragonite_expressed_as_carbon_in_sea_water",
             "mole_concentration_of_bacteria_expressed_as_carbon_in_sea_water",
@@ -1912,14 +1920,17 @@
             "mole_concentration_of_phytoplankton_expressed_as_phosphorus_in_sea_water",
             "mole_concentration_of_phytoplankton_expressed_as_silicon_in_sea_water",
             "mole_concentration_of_picophytoplankton_expressed_as_carbon_in_sea_water",
+            "mole_concentration_of_sulfur_hexafluoride_in_sea_water",
             "mole_concentration_of_zooplankton_expressed_as_carbon_in_sea_water",
             "mole_fraction_of_acetone_in_air",
             "mole_fraction_of_artificial_tracer_with_fixed_lifetime_in_air",
             "mole_fraction_of_carbon_dioxide_in_air",
+            "mole_fraction_of_carbon_monoxide_in_air",
             "mole_fraction_of_cfc113_in_air",
             "mole_fraction_of_cfc11_in_air",
             "mole_fraction_of_cfc12_in_air",
             "mole_fraction_of_dimethyl_sulfide_in_air",
+            "mole_fraction_of_ethane_in_air",
             "mole_fraction_of_formaldehyde_in_air",
             "mole_fraction_of_hcfc22_in_air",
             "mole_fraction_of_hydrogen_chloride_in_air",
@@ -1937,6 +1948,9 @@
             "mole_fraction_of_ox_in_air",
             "mole_fraction_of_ozone_in_air",
             "mole_fraction_of_peroxyacetyl_nitrate_in_air",
+            "mole_fraction_of_propane_in_air",
+            "mole_fraction_of_propene_in_air",
+            "mole_fraction_of_sulfur_dioxide_in_air",
             "net_downward_radiative_flux_at_top_of_atmosphere_model",
             "net_downward_shortwave_flux_at_sea_water_surface",
             "net_primary_mole_productivity_of_biomass_expressed_as_carbon_by_calcareous_phytoplankton",
@@ -2048,6 +2062,7 @@
             "root_mass_content_of_nitrogen",
             "runoff_flux",
             "salt_flux_into_sea_water_from_rivers",
+            "sea_area_fraction",
             "sea_floor_depth_below_geoid",
             "sea_ice_amount",
             "sea_ice_area",
@@ -2056,6 +2071,7 @@
             "sea_ice_average_normal_horizontal_stress",
             "sea_ice_basal_drag_coefficient_for_momentum_in_sea_water",
             "sea_ice_basal_temperature",
+            "sea_ice_enthalpy_content",
             "sea_ice_extent",
             "sea_ice_freeboard",
             "sea_ice_mass_content_of_salt",
@@ -2063,7 +2079,6 @@
             "sea_ice_salinity",
             "sea_ice_speed",
             "sea_ice_surface_temperature",
-            "sea_ice_temperature_expressed_as_heat_content",
             "sea_ice_thickness",
             "sea_ice_transport_across_line",
             "sea_ice_volume",
@@ -2169,6 +2184,7 @@
             "surface_downward_eastward_stress",
             "surface_downward_eastward_stress_due_to_boundary_layer_mixing",
             "surface_downward_heat_flux_in_air",
+            "surface_downward_heat_flux_in_sea_ice",
             "surface_downward_heat_flux_in_sea_water",
             "surface_downward_heat_flux_in_snow",
             "surface_downward_latent_heat_flux",
@@ -2218,6 +2234,7 @@
             "surface_snow_and_ice_melt_heat_flux",
             "surface_snow_and_ice_refreezing_flux",
             "surface_snow_area_fraction",
+            "surface_snow_mass",
             "surface_snow_melt_flux",
             "surface_snow_thickness",
             "surface_temperature",
@@ -2311,7 +2328,6 @@
             "tendency_of_atmosphere_mole_concentration_of_nitrous_oxide_due_to_chemical_destruction",
             "tendency_of_atmosphere_mole_concentration_of_ozone_due_to_chemical_destruction",
             "tendency_of_atmosphere_mole_concentration_of_ozone_due_to_chemical_production",
-            "tendency_of_atmosphere_moles_of_nox_expressed_as_nitrogen",
             "tendency_of_eastward_wind_due_to_advection_by_northward_transformed_eulerian_mean_air_velocity",
             "tendency_of_eastward_wind_due_to_advection_by_upward_transformed_eulerian_mean_air_velocity",
             "tendency_of_eastward_wind_due_to_eliassen_palm_flux_divergence",
@@ -2477,6 +2493,7 @@
             "water_flux_into_sea_water_due_to_surface_drainage",
             "water_flux_into_sea_water_from_icebergs",
             "water_flux_into_sea_water_from_land_ice",
+            "water_flux_into_sea_water_from_rivers",
             "water_flux_into_sea_water_without_flux_correction",
             "water_potential_evaporation_flux",
             "water_table_depth",
@@ -3080,7 +3097,7 @@
             "mmrso4",
             "mmrsoa",
             "mmrss",
-            "modelCellAreai",
+            "modelcellareai",
             "mrfso",
             "mrfsofr",
             "mrlqso",
@@ -3820,6 +3837,9 @@
             "1e-06",
             "1e-09",
             "1e-12",
+            "1e-3",
+            "1e-3 kg m-2",
+            "1e-6",
             "1e3 km3",
             "1e6 km2",
             "J m-2",
@@ -3828,38 +3848,37 @@
             "K m s-1",
             "K s-1",
             "K2",
-            "MJ m-1 s-1",
             "N m-1",
             "N m-2",
             "Pa",
+            "Pa m",
             "Pa m s-2",
             "Pa s-1",
             "Pa2 s-2",
             "W",
+            "W m-1",
             "W m-2",
             "day",
+            "dbar",
             "degC",
-            "degC kg m-2",
-            "degC2",
             "degree",
             "degrees_east",
             "degrees_north",
-            "g m-2",
             "kg",
+            "kg degree_C m-2",
             "kg kg-1",
             "kg m-1 s-1",
             "kg m-2",
             "kg m-2 s-1",
             "kg m-3",
             "kg s-1",
-            "km-2 s-1",
+            "kg s-1 m-1",
             "m",
             "m s-1",
-            "m s-1 d-1",
             "m s-2",
-            "m-1",
             "m-1 sr-1",
             "m-2",
+            "m-2 s-1",
             "m-3",
             "m2",
             "m2 s-1",
@@ -3874,12 +3893,11 @@
             "mol m-3",
             "mol m-3 s-1",
             "mol mol-1",
-            "mol s-1",
             "s",
             "s m-1",
             "s-1",
             "s-2",
-            "yr"
+            "year"
           ]
         },
         "cmip6:variant_label": {
@@ -3891,6 +3909,83 @@
         "^(?!cmip6:)": {}
       },
       "additionalProperties": false
+    },
+    "link_fields": {
+      "$comment": "Validation schema for STAC links. See https://github.com/radiantearth/stac-spec/blob/master/commons/links.md",
+      "type": "object",
+      "properties": {
+        "href": {
+          "format": "uri"
+        }
+      },
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "rel": {
+                "const": "cite-as"
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "href": {
+                "pattern": "^https?://cera-www\\.dkrz\\.de/WDCC/meta/CMIP6/.*$"
+              },
+              "title": {
+                "const": "Citation URL"
+              },
+              "type": {
+                "const": "application/json"
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "rel": {
+                "const": "describedby"
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "href": {
+                "pattern": "^https?://furtherinfo.es-doc.org/CMIP6.*$"
+              },
+              "title": {
+                "const": "ES-DOC"
+              },
+              "type": {
+                "const": "text/html"
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "rel": {
+                "const": "related"
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "href": {
+                "pattern": "^https?://errata.esgf.io/.*$"
+              },
+              "title": {
+                "const": "Errata issue"
+              },
+              "type": {
+                "const": "text/html"
+              }
+            }
+          }
+        }
+      ]
     }
   }
 }

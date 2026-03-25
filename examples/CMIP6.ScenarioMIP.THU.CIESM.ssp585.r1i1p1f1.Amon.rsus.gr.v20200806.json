@@ -57,18 +57,15 @@
     "latest": true,
     "project": "CMIP6",
     "title": "CMIP6.ScenarioMIP.IPSL.IPSL-CM6A-LR.ssp119.r4i1p1f1.CFmon.clcalipso.gr",
-    "master_id": "CMIP6.ScenarioMIP.IPSL.IPSL-CM6A-LR.ssp119.r4i1p1f1.CFmon.clcalipso.gr",
+    "base_id": "CMIP6.ScenarioMIP.IPSL.IPSL-CM6A-LR.ssp119.r4i1p1f1.CFmon.clcalipso.gr",
+    "cmip6:grid": "LMDZ grid",
+    "cmip6:experiment": "low-end scenario reaching 1.9 W m-2, based on SSP1",
     "cmip6:activity_id": [
       "ScenarioMIP"
     ],
-    "cmip6:variable_cf_standard_name": "cloud_area_fraction_in_atmosphere_layer",
     "cmip6:data_specs_version": "01.00.28",
     "cmip6:experiment_id": "ssp119",
-    "cmip6:experiment": "low-end scenario reaching 1.9 W m-2, based on SSP1",
-    "cmip6:citation_url": "http://cera-www.dkrz.de/WDCC/meta/CMIP6/CMIP6.DCPP.NCC.NorCPM1.dcppA-hindcast.s1987-r4i1p1f1.Amon.hus.gn.v20191029.json",
     "cmip6:frequency": "mon",
-    "cmip6:further_info_url": "https://furtherinfo.es-doc.org/CMIP6.IPSL.IPSL-CM6A-LR.ssp119.none.r4i1p1f1",
-    "cmip6:grid": "LMDZ grid",
     "cmip6:grid_label": "gr",
     "cmip6:institution_id": "IPSL",
     "cmip6:member_id": "r4i1p1f1",
@@ -77,15 +74,16 @@
     "cmip6:realm": [
       "atmos"
     ],
-    "cmip6:source_id": "IPSL-CM6A-LR",
-    "cmip6:sub_experiment_id": "none",
     "cmip6:pid": "hdl:21.14100/eecd8a20-295d-4a51-a806-feefea8fba66",
+    "cmip6:source_id": "IPSL-CM6A-LR",
     "cmip6:source_type": [
       "AOGCM",
       "BGC"
     ],
+    "cmip6:sub_experiment_id": "none",
     "cmip6:table_id": "CFmon",
     "cmip6:variable_id": "clcalipso",
+    "cmip6:variable_cf_standard_name": "cloud_area_fraction_in_atmosphere_layer",
     "cmip6:variable_long_name": "CALIPSO Percentage Cloud Cover",
     "cmip6:variable_units": "%",
     "cmip6:variant_label": "r4i1p1f1"
