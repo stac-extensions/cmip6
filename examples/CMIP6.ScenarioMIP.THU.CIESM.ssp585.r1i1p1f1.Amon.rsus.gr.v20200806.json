@@ -2,150 +2,145 @@
   "type": "Feature",
   "stac_version": "1.1.0",
   "stac_extensions": [
-    "https://stac-extensions.github.io/cmip6/v3.0.0/schema.json",
+    "https://stac-extensions.github.io/cmip6/v3.0.1/schema.json",
+    "https://stac-extensions.github.io/alternate-assets/v1.2.0/schema.json",
     "https://stac-extensions.github.io/file/v2.1.0/schema.json"
   ],
-  "id": "CMIP6.ScenarioMIP.THU.CIESM.ssp585.r1i1p1f1.Amon.rsus.gr.v20200806",
+  "id": "CMIP6.ScenarioMIP.IPSL.IPSL-CM6A-LR.ssp119.r4i1p1f1.CFmon.clcalipso.gr.v20191122",
   "collection": "CMIP6",
   "geometry": {
     "type": "Polygon",
     "coordinates": [
       [
         [
-          -180,
+          0,
           -90
         ],
         [
-          178.75,
+          357.5,
           -90
         ],
         [
-          178.75,
+          357.5,
           90
         ],
         [
-          -180,
+          0,
           90
         ],
         [
-          -180,
+          0,
           -90
         ]
       ]
     ]
   },
   "bbox": [
-    -180,
+    0,
     -90,
-    178.75,
+    357.5,
     90
   ],
   "properties": {
-    "title": "CMIP6.ScenarioMIP.THU.CIESM.ssp585.r1i1p1f1.Amon.rsus.gr.v20200806",
-    "datetime": null,
-    "latest": true,
+    "size": 1691149215,
+    "created": "2026-03-06T01:15:44Z",
+    "updated": "2026-03-06T01:15:44Z",
     "retracted": false,
-    "size": 1000,
+    "datetime": null,
+    "start_datetime": "2015-01-16T12:00:00Z",
+    "end_datetime": "2015-01-16T12:00:00Z",
+    "version": "20191122",
+    "access": [
+      "HTTPServer",
+      "Globus"
+    ],
+    "latest": true,
+    "project": "CMIP6",
+    "title": "CMIP6.ScenarioMIP.IPSL.IPSL-CM6A-LR.ssp119.r4i1p1f1.CFmon.clcalipso.gr",
+    "base_id": "CMIP6.ScenarioMIP.IPSL.IPSL-CM6A-LR.ssp119.r4i1p1f1.CFmon.clcalipso.gr",
+    "cmip6:grid": "LMDZ grid",
+    "cmip6:experiment": "low-end scenario reaching 1.9 W m-2, based on SSP1",
     "cmip6:activity_id": [
       "ScenarioMIP"
     ],
-    "updated": "2025-01-24T14:29:23.741213Z",
-    "start_datetime": "4029-01-16T12:00:00Z",
-    "end_datetime": "4114-12-16T12:00:00Z",
-    "cmip6:product": "model-output",
-    "project": "CMIP6",
-    "cmip6:realm": [
-      "aerosol"
-    ],
-    "cmip6:conventions": [
-      "CMIP-6.0"
-    ],
-    "cmip6:experiment": "As piSST, but with monthly-varying SSTs taken from years 111-140 of each model's own abrupt-4xCO2 experiment instead of from piControl. Sea-ice is unchanged from piSST",
-    "cmip6:forcing_index": 1,
-    "cmip6:initialization_index": 1,
-    "cmip6:realization_index": 1,
-    "cmip6:physics_index": 1,
-    "cmip6:institution": "Lawrence Livermore National Laboratory, Livermore, CA 94550, USA. Mailing address: LLNL Climate Program, c/o Stephen A. Klein, Principal Investigator, L-103, 7000 East Avenue, Livermore, CA 94550, USA",
-    "cmip6:license": "CC0-1.0",
-    "cmip6:member_id": "s2024-r3i3p3f3",
-    "cmip6:pid": "hdl:21.14100/D6A1A806-f857-FecC-780a-De0eca7452ec",
-    "cmip6:source": "EC-Earth3-LR",
-    "cmip6:sub_experiment": "initialized near end of year 2016",
-    "cmip6:variable_cf_standard_name": "minus_tendency_of_atmosphere_mass_content_of_sulfur_dioxide_due_to_dry_deposition",
-    "cmip6:variable_units": "m2 s-1",
-    "cmip6:version": "23981231",
-    "cmip6:variable_long_name": "Gas-Phase Production Rate of SO4",
-    "cmip6:citation_url": "http://cera-www.dkrz.de/WDCC/meta/CMIP6/CMIP6.ScenarioMIP.THU.CIESM.ssp585.r1i1p1f1.Amon.rsus.gr.v20200806.json",
-    "cmip6:data_specs_version": "01.00.29",
+    "cmip6:data_specs_version": "01.00.28",
+    "cmip6:experiment_id": "ssp119",
     "cmip6:frequency": "mon",
-    "cmip6:further_info_url": "https://furtherinfo.es-doc.org/CMIP6.THU.CIESM.ssp585.none.r1i1p1f1",
-    "cmip6:grid": "zonal mean data reported on a model's native latitude grid",
     "cmip6:grid_label": "gr",
-    "cmip6:institution_id": "THU",
-    "cmip6:source_id": "CIESM",
-    "cmip6:source_type": [
-      "AOGCM"
+    "cmip6:institution_id": "IPSL",
+    "cmip6:member_id": "r4i1p1f1",
+    "cmip6:nominal_resolution": "250 km",
+    "cmip6:product": "model-output",
+    "cmip6:realm": [
+      "atmos"
     ],
-    "cmip6:experiment_id": "ssp585",
-    "cmip6:sub_experiment_id": "s1989",
-    "cmip6:nominal_resolution": "100 km",
-    "cmip6:table_id": "Amon",
-    "cmip6:variable_id": "rsus",
-    "cmip6:variant_label": "r1i1p1f1",
-    "created": "2025-01-24T14:29:23.741213Z"
+    "cmip6:pid": "hdl:21.14100/eecd8a20-295d-4a51-a806-feefea8fba66",
+    "cmip6:source_id": "IPSL-CM6A-LR",
+    "cmip6:source_type": [
+      "AOGCM",
+      "BGC"
+    ],
+    "cmip6:sub_experiment_id": "none",
+    "cmip6:table_id": "CFmon",
+    "cmip6:variable_id": "clcalipso",
+    "cmip6:variable_cf_standard_name": "cloud_area_fraction_in_atmosphere_layer",
+    "cmip6:variable_long_name": "CALIPSO Percentage Cloud Cover",
+    "cmip6:variable_units": "%",
+    "cmip6:variant_label": "r4i1p1f1"
   },
   "links": [
     {
       "rel": "self",
       "type": "application/geo+json",
-      "href": "https://api.stac.ceda.ac.uk/collections/cmip6/items/CMIP6.ScenarioMIP.THU.CIESM.ssp585.r1i1p1f1.Amon.rsus.gr.v20200806"
+      "href": "https://integration-testing.api.stac.esgf-west.org/collections/CMIP6/items/CMIP6.ScenarioMIP.IPSL.IPSL-CM6A-LR.ssp119.r4i1p1f1.CFmon.clcalipso.gr.v20191122"
     },
     {
       "rel": "parent",
       "type": "application/json",
-      "href": "https://api.stac.ceda.ac.uk/collections/cmip6"
+      "href": "https://integration-testing.api.stac.esgf-west.org/collections/CMIP6"
     },
     {
       "rel": "collection",
       "type": "application/json",
-      "href": "https://api.stac.ceda.ac.uk/collections/cmip6"
+      "href": "https://integration-testing.api.stac.esgf-west.org/collections/CMIP6"
     },
     {
       "rel": "root",
       "type": "application/json",
-      "href": "https://api.stac.ceda.ac.uk/"
+      "href": "https://integration-testing.api.stac.esgf-west.org/"
     }
   ],
   "assets": {
-    "reference_file": {
-      "href": "https://dap.ceda.ac.uk/badc/cmip6/metadata/kerchunk/pipeline1/ScenarioMIP/THU/CIESM/kr1.0/CMIP6_ScenarioMIP_THU_CIESM_ssp585_r1i1p1f1_Amon_rsus_gr_v20200806_kr1.0.json",
-      "type": "application/zstd",
+    "globus": {
+      "href": "https://app.globus.org/file-manager?origin_id=904ff241-867c-404e-b355-64b701ba6ac1&origin_path=/css03_data/CMIP6/ScenarioMIP/IPSL/IPSL-CM6A-LR/ssp119/r4i1p1f1/CFmon/clcalipso/gr/v20191122/",
+      "description": "Globus Web App Link",
+      "type": "text/html",
       "roles": [
-        "reference",
         "data"
       ],
-      "cmip6:tracking_id": "hdl:21.14100/12FA6A18-f7fA-FDe7-C04e-B32874c8c27b",
-      "protocol": "https",
-      "open_zarr_kwargs": {
-        "decode_times": true
-      },
-      "created": "2025-01-24T14:29:23Z",
-      "updated": "2025-01-24T14:29:23Z",
-      "file:checksum": "fe60fd36199a07c2a888e2f6861920b0",
-      "file:size": 100
+      "alternate:name": "esgf-data.nersc.gov",
+      "created": "2019-11-22T10:15:56Z",
+      "updated": "2019-11-22T10:15:56Z",
+      "protocol": "globus",
+      "node": "esgf-data.nersc.gov",
+      "file:local_path": "CMIP6/ScenarioMIP/IPSL/IPSL-CM6A-LR/ssp119/r4i1p1f1/CFmon/clcalipso/gr/v20191122"
     },
-    "data0001": {
-      "href": "https://dap.ceda.ac.uk/badc/cmip6/data/CMIP6/ScenarioMIP/THU/CIESM/ssp585/r1i1p1f1/Amon/rsus/gr/v20200806/rsus_Amon_CIESM_ssp585_r1i1p1f1_gr_402901-411412.nc",
+    "clcalipso_CFmon_IPSL-CM6A-LR_ssp119_r4i1p1f1_gr_201501-210012.nc": {
+      "href": "https://g-eba899.6b7bd8.0ec8.data.globus.org//css03_data/CMIP6/ScenarioMIP/IPSL/IPSL-CM6A-LR/ssp119/r4i1p1f1/CFmon/clcalipso/gr/v20191122/clcalipso_CFmon_IPSL-CM6A-LR_ssp119_r4i1p1f1_gr_201501-210012.nc",
+      "description": "HTTPServer Link",
       "type": "application/netcdf",
-      "created": "2025-01-01T14:29:23Z",
-      "updated": "2025-01-01T14:29:23Z",
       "roles": [
         "data"
       ],
-      "cmip6:tracking_id": "hdl:21.14100/7a93BD5B-Bd7E-39ab-7147-C50583F23fBD",
+      "alternate:name": "esgf-data.nersc.gov",
+      "file:size": 1691149215,
+      "file:checksum": "1220fc151c37b78dd4534478975bffaf58b70acdd49ee4541de84ebb221be3ce756a",
+      "cmip6:tracking_id": "hdl:21.14100/eecd8a20-295d-4a51-a806-feefea8fba66",
+      "created": "2019-11-22T10:15:56Z",
+      "updated": "2019-11-22T10:15:56Z",
       "protocol": "https",
-      "file:checksum": "f0d35adeeea2419e7c9011800c7398a2",
-      "file:size": 1000
+      "node": "esgf-data.nersc.gov",
+      "file:local_path": "CMIP6/ScenarioMIP/IPSL/IPSL-CM6A-LR/ssp119/r4i1p1f1/CFmon/clcalipso/gr/v20191122/clcalipso_CFmon_IPSL-CM6A-LR_ssp119_r4i1p1f1_gr_201501-210012.nc"
     }
   }
 }
