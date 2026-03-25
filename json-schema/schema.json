@@ -83,7 +83,7 @@
           "items": {
             "$ref": "#/definitions/link_fields"
           },
-          "allOf": [
+          "anyOf": [
             {
               "contains": {
                 "properties": {
